@@ -1,0 +1,42 @@
+name: "Relatório de Bug / Falha Técnica"
+description: "Reporte um erro, falha de tipagem, inconsistência de interface ou falha de integração"
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a manter a qualidade e robustez deste projeto!
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descrição do Problema"
+      description: "Uma explicação clara e objetiva do que deu errado."
+      placeholder: "Ex: Ao submeter o formulário sem preencher os campos opcionais, a requisição trava..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Passos para Reproduzir"
+      description: "Como outro desenvolvedor ou agente pode reproduzir o bug?"
+      value: |
+        1. Acessar rota '...'
+        2. Clicar em '...'
+        3. Observar erro '...'
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Ambiente & Dispositivo"
+      description: "Informações sobre SO, navegador, versão de Node/Python ou resolução."
+      placeholder: "Ex: macOS Chrome 124, Safari iOS 17, Node v20.11"
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs ou Evidências (Opcional)"
+      description: "Cole stack traces do terminal ou console."
+      render: shell

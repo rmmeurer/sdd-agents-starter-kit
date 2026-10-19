@@ -1,0 +1,40 @@
+name: "Proposta de Nova Feature / Funcionalidade"
+description: "Sugira uma nova funcionalidade, módulo, tela ou integração"
+title: "feat: "
+labels: ["enhancement", "needs-spec"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por propor uma melhoria para este projeto!
+        Lembre-se: antes de implementar código, a proposta deverá passar pelo **[MODO: ARQUITETO]** para criação da respectiva especificação técnica em `documentation/specs/`.
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Qual problema ou oportunidade esta feature resolve?"
+      description: "Descreva o contexto de negócio ou a dor do usuário final."
+      placeholder: "Ex: Necessidade de autenticação biométrica para reduzir fricção no login..."
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Solução Proposta"
+      description: "Como você imagina o fluxo, tela, arquitetura ou endpoint?"
+      placeholder: "Ex: Implementar suporte a WebAuthn com fallback para Magic Link..."
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: "Camada / Domínio Afetado"
+      options:
+        - "Frontend / Interface do Usuário"
+        - "Backend / APIs & Regras de Negócio"
+        - "Banco de Dados & Modelagem"
+        - "Integrações & Webhooks"
+        - "DevOps / CI / Tooling"
+        - "Documentação & Governança"
+        - "Outro"
+    validations:
+      required: true
